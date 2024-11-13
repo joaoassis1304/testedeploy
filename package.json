@@ -5,7 +5,9 @@
   "main": "./server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "start": "vercel start"
   },
   "author": "",
   "license": "ISC",

@@ -20,8 +20,5 @@
     "express-session": "^1.17.3",
     "pg": "^8.11.3",
     "pg-protocol": "^1.7.0"
-  },
-  "devDependencies": {
-    "vitest": "^2.1.4"
   }
 }

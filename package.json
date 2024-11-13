@@ -5,9 +5,9 @@
   "main": "./server.js",
   "type": "module",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "start": "vercel start"
+    "dev": "vercel dev",   
+    "build": "echo 'build step not needed'",   
+    "deploy": "vercel"     
   },
   "author": "",
   "license": "ISC",

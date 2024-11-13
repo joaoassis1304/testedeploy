@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/index.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+    <title><%= title %></title>
+</head>
+
+<body>
+
+<%- include('partials/header_navbar')%>
+
+
+<!-- Janela Modal Carrinho de Compras -->
+<div id="janela-modal-carrinho">
+     
+    <div id="area-produto-carrinho">
+
+        <div id="fechar">
+            <button> X </button>
+        </div>
+
+        <div id="detalhes-produto-carrinho"> 
+
+            <div id="imagem-produto-carrinho">
+                <img  src="" alt="img">
+            </div>  
+
+            <div id="texto-produto-carrinho">
+                <div id="nome-produto-carrinho"></div>
+                <div id="categoria-produto-carrinho"></div>    
+            </div>
+
+            <div id="area-quantidade">
+                <div id="mais"> <button>+</button> </div>
+                <div id="quantidade">1</div>
+                <div id="menos"><button>-</button></div>
+            </div>  
+
+        </div>
+
+        <div id="area-produto-footer">
+            <button id="adicionar-carrinho-btn"> <a href=''>Adicionar ao Carrinho</a> </button>
+            <div id="sub-total">Sub Total R$</div>
+            <div id="valor"></div>
+        </div>
+
+    </div>
+    
+</div>    
+
+<main>
+
+    <div id="area-produto"> </div>
+
+</main>
+    
+
+<script src="js/index.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/login.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+    <title><%= title %></title>
+</head>
+
+<body>
+
+<%- include('partials/header_navbar')%>
+
+    <h1>Login</h1>
+    
+    <% if(typeof(erro) != 'undefined') {%>
+
+        <h3 style="color: #ff2727; background-color: rgb(255, 255, 255); height: 50px; border-radius: 10px; text-align: center;">Login Incorreto!</h3>
+
+    <%}%>
+    
+    <form action="/login-auth" method="post">
+        
+        <div id="area-form">          
+
+            <label  id="usuario-label" >Usuário</label><br>
+            <input id="usuario-input" name="usuario" type="text"><br>
+            
+            <label id="senha-label" >Senha</label><br>
+            <input id="senha-input" name="senha" type="password"><br>
+            <div id="entrar-cadastrar-area">
+               <button id="entrar" type="submit" > Entrar </button>
+               <button id="criar-conta"> Criar Conta </button>
+            </div>    
+        </div>         
+    </form>
+        <script src="js/login.js"></script>
+        <script src="js/navbar.js"></script>
+
+</body>
+</html>

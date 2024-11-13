@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    align-content: center;
+    background-color:#ffccb9;
+    font-family: 'Montserrat', sans-serif;   
+    color: white;  
+}
+#cabecalho{
+    text-align: center;
+}
+#info-compra{
+    margin-left: 20px;
+}
+#valor-total{
+    margin-left: 20px;
+}

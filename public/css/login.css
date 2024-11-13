@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    align-content: center;
+    background-color:#ffccb9;
+    font-family: 'Montserrat', sans-serif;   
+    color: white;    
+}
+h1{
+    margin-left: 45%;
+}
+
+form label{
+    
+    font-size: 25px;
+}
+
+input{
+    border: 1px solid white;
+    border-radius: 3px;
+    height: 45px;
+    width: 500px;
+}
+#area-form{
+    margin-left: 38%;
+    margin-top: 5%;
+}
+#entrar, #criar-conta{
+    height: 55px;
+    width: 250px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+    border-radius: 12px;
+    transition-duration: 0.2s;
+}
+#entrar:active{
+    scale:1.2;
+}
+#criar-conta:active{
+    scale:1.2;
+}
+/* #criar-conta{
+    height: 55px;
+    width: 250px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+    border-radius: 12px;
+    transition-duration: 0.2s;
+} */

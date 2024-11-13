@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/cadastrar_produtos.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+    <title><%= title %></title>
+</head>
+
+<body>
+
+<%- include('partials/header_cadastrar_produtos')%>
+
+    <div class="main">
+
+        <h1>Cadastrar Produtos</h1>
+        
+        <form action="/salvar-produto" method="post" >
+
+                <label name="nome_label">Nome</label><br>
+                 <input id="produto" name="produto"type="text" placeholder="Nome do Produto"><br>
+    
+                 <label name="categoria_label">Categoria</label><br>
+                 <input id="categoria" name="categoria" type="text" placeholder="Nome da Categoria"><br>
+    
+                 <label name="preco_label">Preço R$</label><br>
+                 <input id="preco" name="preco"type="number" placeholder="Preço"> <br>
+                 
+                 <label name="quantidade_label">Quantidade</label>
+                 <input name="quantidade" type="number" placeholder="Quantidade">
+                 
+                <input type="file"  id="imagem-upload"  accept="image/png, image/jpeg"  onchange="previewImagem()" />
+                
+        </form>
+    
+        <img id="preview" src="#" alt=""> <br>
+    
+        <button id="enviar" >Cadastrar Produto</button>
+
+    </div>
+
+
+    <script src="js/cadastrar_produtos_index.js"></script> 
+       
+</body>
+</html>

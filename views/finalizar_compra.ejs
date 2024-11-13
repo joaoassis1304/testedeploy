@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/finalizar_compra.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+    <title><%= title %></title>
+</head>
+
+<body>
+
+<%- include ('partials/header_navbar')%>
+
+    <% if(typeof _compra != undefined){%>    
+
+        <h1>Produtos Selecionados</h1>
+
+        <div id="area-pagamento">
+            
+            <% _compra.forEach((item)=>{ %>  
+                <div id="area-produto">
+                    
+                    <div id="imagem-produto">            
+                        <img src="<%= item.imagem%>">
+                    </div>
+                    <div id="info-produto">
+                        <div id="nome-produto"><%= item.produto %></div>
+                        <div id="categoria-produto"><%= item.categoria %></div>
+                        <div id="quantidade-produto"><%= item.quantidade %></div>                    
+                    </div>                    
+                    
+                </div> 
+                <hr>       
+            <%})%>
+
+        </div>
+
+    <%}%>
+    <div id="pagar">
+        <button>Pagar</button>
+        <div id="valor-total-texto">Valor Total R$: </div>
+        <div id="valor-total"> <%= valor_total %> </div>
+    </div>
+   
+    <!-- Janel Modal Dados de Pagamento -->
+
+    <div id="janela-modal-pagamento">
+        <div id="dados">
+            <% if(endereco != undefined){%>
+
+                <div id="endereco">
+                    <h1>Endereço</h1>
+
+                    <p>Rua:  <%= endereco.rua%> </p>
+                    <p>Bairro:  <%= endereco.bairro%> </p> 
+                    <p>Numero:  <%= endereco.numero%> </p> 
+                    <p>Complemento:  <%= endereco.complemento%></p> 
+                    <p>CEP: <%= endereco.cep%> </p> 
+                    <p>Cidade:  <%= endereco.cidade%> </p> 
+                    <p>UF: <%= endereco.uf %></p>
+                    
+                </div>
+            <%}%>
+    
+            <%if(cartao != undefined){%>
+    
+                <div id="cartao-credito">
+                
+                    <h1>Cartão</h1>           
+                
+                    <p>Numero: <%= cartao.numero %> </p>
+                    <p>Data Val.: <%= cartao.data_val %> </p>  
+                    <p>cvv: <%= cartao.cvv %> </p>
+                    <p>CPF: <%= cartao.cpf %></p>
+                    
+                </div>
+            <%}%>
+        </div>      
+
+        <div id="confirmar-pagamento">
+            <button id="confirmar-btn">Confirmar Pagamento</button>
+            <button id="cancelar-btn">Cancelar</button>
+        </div>
+        
+    </div>
+
+<script src="js/navbar.js"></script>
+<script src="js/finalizar_compra.js"></script>
+</body>
+</html>

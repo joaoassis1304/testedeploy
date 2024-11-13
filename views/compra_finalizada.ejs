@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/compra_finalizada.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+    <title><%= title %></title>
+</head>
+<body>
+<%- include('partials/header_navbar')%>
+
+    <div id="cabecalho">    
+
+        <h1>Pagamento Realizado Com Sucesso!</h1>
+        <h3>Detalhes da Compra</h3>
+
+    </div>
+    
+    <div id="detalhes-compra">
+        
+        <%if(compra != undefined){%>
+
+            <%compra.forEach((item)=>{%>
+                <div id="info-compra">
+
+                    <div id="nome-produto">produto: <%= item.produto%></div>
+                    <div id="categoria-produto">categoria: <%= item.categoria%></div>
+                    <div id="quantidade">quantidade: <%= item.quantidade %></div>
+                    <div id="data-compra">Data da Compra: <%= data%></div>
+                    
+                </div>
+                <hr>
+            <%})%>
+
+            <div id="valor-total">Valor da Compra R$: <%= valor_total%> </div>
+        <%}%>
+        
+    </div>
+
+
+<script src="js/navbar.js"></script>
+
+</body>
+</html>

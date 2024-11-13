@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/suporte.css">
+    <title><%= title %></title>
+</head>
+<body style="margin: 0; background-color: #ffccb9;">
+
+    <%-include ('partials/header_navbar')%> 
+
+    <form action="#" onsubmit="EnviarMensagem()" >
+
+        <p id="mensagem"></p>
+        <label for="email">Seu Email</label>
+
+        <input type="text" id="email" name="email" placeholder="Seu email..." >
+
+        <label for="titulo">Titulo</label>
+
+        <input type="text" id="assunto" name="assunto" placeholder="Título do assunto ...">
+
+        <label for="texto">Menssagem</label>
+
+        <textarea type="text" name="texto" id="texto" placeholder="Descreva seu problema..."> </textarea>
+
+        <button id="submit-button" type="submit"> enviar</button>
+    </form>
+
+   <script src="js/navbar.js"></script>
+   <script src="js/suporte.js"></script>
+</body>
+</html>

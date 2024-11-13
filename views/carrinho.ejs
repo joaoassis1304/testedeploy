@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/carrinho.css">            
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+    
+        <title><%= title %></title>
+    </head>
+
+<body>
+
+    <%- include('partials/header_navbar')%>
+
+<!-- Exibir produtos ou Mesagem de Carrinho Vazio-->
+
+    <%if(produtos != '') {%>
+
+        <%produtos.forEach((item)=>{ %>
+
+            
+            <div id="area-produto"> 
+
+                <div id="carrinho">
+                    <input id='valor-unitario' type="hidden" value="<%= item.preco_unitario%>">
+                    <div id="area-produto-carrinho">
+                    
+                        <div id="excluir">
+                            <button> <a href ='/excluir-carrinho/?produto=<%= item.produto%>&quantidade=<%= item.quantidade%>'> X </a> </button>
+                        </div>
+                    
+                        <div id="detalhes-produto-carrinho"> 
+                        
+                            <div id="imagem-produto-carrinho">
+                                <img  src='<%= item.imagem%>' alt="img">
+                            </div>  
+                        
+                            <div id="texto-produto-carrinho">
+                                <div id="nome-produto-carrinho"><%= item.produto %></div>
+                                <div id="categoria-produto-carrinho"> <%= item.categoria %> </div>    
+                            </div>
+                        
+                            <div id="area-quantidade">
+                                <div id="mais"> <button>+</button> </div>
+                                <div id="quantidade"> <%= parseInt(item.quantidade) %> </div>
+                                <div id="menos"><button>-</button></div>
+                            </div>  
+                        
+                        </div>
+                    
+                        <div id="area-produto-footer">                    
+                            <div id="sub-total">Sub Total R$</div>
+                            <div id="valor"><%= parseFloat(item.preco_carrinho) %></div>
+                        </div>
+                    
+                    </div>            
+                </div>
+            </div>
+
+        <%})%>
+
+        <hr>
+        <div id="finalizar-compra-area">
+            <div id="finalizar-compra-btn"><button> Finalizar Compra</button></div>
+            <div id="total-area"> Total R$</div>
+            <div id="valor-total"> </div>
+        </div>
+           
+<%}else{%>
+
+    <div id="carrinho-vazio">
+        <h1>Carrinho Vazio! 💔</h1>
+        <img style="width: 64px; height: 64px;" src='imagens/icones/carrinho-vazio.png' alt="">
+    </div>
+    <hr>
+    
+<%}%>
+
+
+<script src='js/carrinho.js'></script>
+<script src='js/navbar.js'></script>
+</body>
+</html>
+

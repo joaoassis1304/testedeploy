@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/perfil.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+    <title><%= title %></title>
+</head>
+
+<body>
+
+<%- include('partials/header_navbar')%>
+
+<!-- Janela Modal Editar Endereço e pagamento -->
+<div id="janela-modal-endereco">
+
+    <div id="area-form">
+
+        <div id="dados">
+
+            <h1>Endereço</h1>
+            <form action="/salvar-endereco" method="POST">
+                <p>Rua</p>
+                <input name="rua" type="text">
+
+                <p>Bairro</p>
+                <input name="bairro" type="text">
+
+                <p>Numero</p>
+                <input name="numero" type="text" id="numero" oninput="formatarNumero()" maxlength="6">
+
+                <p>Complemento</p>
+                <input name="complemento" type="text">
+
+                <p>CEP</p>
+                <input name="cep" id="cep" type="text" oninput="formatarCep()" maxlength="8" >
+
+                <p>Cidade</p>
+                <input name="cidade" type="text">
+
+                <p>UF</p>
+                <input name="uf" type="text" maxlength="2">
+
+                <div id="form-footer">
+                    <button id="salvar-btn" type="submit">Salvar</button>
+                    <button id="cancelar-btn">Cancelar</button>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Janela Modal Cartao -->
+<div id="janela-modal-cartao">
+
+    <div id="area-form">
+
+        <div id="dados">
+
+            <h1>Cartão</h1>
+            <form action="/salvar-cartao" method="POST">
+
+                <p>Numero</p>
+                <input name="numero_cartao" type="text" id="numero_cartao"  oninput="formatarNumCartao()" minlength="16" maxLength="16">
+
+                <p>Data de Válidade</p>
+                <input name="data_val" type="text" id="data_val"  oninput="formatarDataVal()" minlength="5" maxlength="5">
+
+                <p>CVV</p>
+                <input name="cvv" type="text" id="cvv" oninput="formatarCvv()" maxlength="3">
+
+                <p>CPF</p>
+                <input name="cpf" type="text" id="cpf"  oninput="formatarCpf()" minlength="11" maxlength="11">
+
+                <div id="form-footer">
+                    <button id="salvar-btn" type="submit">Salvar</button>
+                    <button id="cancelar-btn">Cancelar</button>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="main">
+   
+    <div id="area-perfil">
+        
+        <div id="cabecalho-perfil">
+            <img id="icone-usuario" src="imagens/icones/usuario.png" alt="">
+
+            <h1><%= usuario%></h1>
+        </div>
+
+        <hr/>
+
+    <div id="endereco">
+        <h1>Endereço</h1>
+
+        <%if(endereco != undefined){%> 
+                     
+             <p>Rua:  <%= endereco.rua%> </p>
+             <p>Bairro:  <%= endereco.bairro%> </p> 
+             <p>Numero:  <%= endereco.numero%> </p> 
+             <p>Complemento:  <%= endereco.complemento%></p> 
+             <p>CEP: <%= endereco.cep%> </p> 
+             <p>Cidade:  <%= endereco.cidade%> </p> 
+             <p>UF: <%= endereco.uf %></p> 
+            
+             <div id="endereco-btn">                
+                 <button id="adicionar-editar-endereco">Adicionar/Editar</button>
+             </div>             
+            
+        <% } else { %>
+            <p>Rua: </p>
+            <p>Bairro:  </p> 
+            <p>Numero:   </p> 
+            <p>Complemento:  </p> 
+            <p>CEP: </p> 
+            <p>Cidade: </p> 
+            <p>UF:</p> 
+            <div id="endereco-btn">                
+                <button id="adicionar-editar-endereco">Adicionar/Editar</button>
+            </div> 
+        <% } %>
+
+    </div>
+   
+
+        <div id="cartao-credito">
+
+            <h1>Cartão</h1>
+            <%if(cartao != undefined){%>
+            
+                <p>Numero: <%= cartao.numero %> </p>
+                <p>Data Val.: <%= cartao.data_val %> </p>  
+                <p>cvv: <%= cartao.cvv %> </p>
+                <p>CPF: <%= cartao.cpf %></p>
+
+            <%}else{%>
+
+                <p>Numero: </p>
+                <p>Data Val.: </p>  
+                <p>cvv:  </p>
+                <p>CPF: </p>
+            <%}%>
+
+            <div id="cartao-btn">                
+                <button id="adicionar-editar-cartao" >Adicionar/Editar</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/perfil.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    align-content: center;
+    background-color:#ffccb9;
+    font-family: 'Montserrat', sans-serif;   
+    color: white;  
+}
+
+#area-produto{
+    display: flex;
+}
+#imagem-produto img{
+    width: 75px;
+    height: 75px;
+}
+#info-produto{
+    margin-top:5px;
+    margin-left: 50px;   
+    font-size: 18px;    
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.200);
+}
+
+#valor-total, #valor-total-texto{
+    margin-top:25px;
+    margin-left: 50px;   
+    font-size: 32px;
+    font-weight: bold;    
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.200);
+}
+#pagar{
+    display: flex;
+
+}
+#pagar button{
+    height: 55px;
+    width: 250px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+    border-radius: 12px;
+    transition-duration: 0.2s;
+}
+
+#pagar button:active{
+scale:1.2;
+}
+
+/* Janel Modal Dados de Pagamento */
+
+#janela-modal-pagamento{
+    display: none; 
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    margin-top: -300px;    
+    margin-left: 20%;    
+    background-color: #ffc5c5;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.199);    
+}
+#dados{
+    display: flex;
+}
+#confirmar-pagamento{
+    display: flex;
+}
+#confirmar-pagamento button{    
+    height: 55px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 10%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+    border-radius: 12px;
+    font-size: 18px;
+    transition-duration: 0.2s;
+}
+#confirmar-pagamento button:active{
+    scale: 1.2;
+}
+#endereco{
+    margin-left: 50px;
+    font-weight: bold;    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.288);
+}
+#cartao-credito{
+    margin-left: 400px;
+    font-weight: bold;    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.288);
+}

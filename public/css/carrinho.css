@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    align-content: center;
+    background-color:#ffccb9;
+    font-family: 'Montserrat', sans-serif;   
+    color: white;
+  
+}
+
+#carrinho{  
+    
+    display: flex;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    justify-content: center;    
+    
+}
+#area-produto-carrinho{
+    width: 1000px;
+    height: 200px;
+    background-color: #ffc5c5;
+    border-radius: 35px;
+    border: 2px solid #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.253);    
+}
+#excluir{    
+    margin-left: 930px;
+    margin-top: 15px;
+}
+#excluir button{
+    background-color: #FF8C8C;
+    width: 30px;
+    height: 30px;    
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.253);
+}
+#excluir a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329);
+}
+#detalhes-produto-carrinho{
+    display: flex;
+    margin-left: 30px ;
+}
+
+#imagem-produto-carrinho img{
+    margin-top: -25px;
+    height: 130px;
+    width: 130px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.226);
+}
+#nome-produto-carrinho{
+    margin-top:5px;
+    margin-left: 50px;
+    margin-right: -200px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.342);
+}
+#categoria-produto-carrinho{
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.336);
+}
+
+#area-quantidade{
+    display: flex;    
+    align-items:center; 
+    margin-left: 500px;   
+}
+#mais button{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-right: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.356);
+    background: none;
+    border: none;
+    transition-duration: 0.2s;    
+}
+#menos button{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-left: 5px;
+    margin-top: -6px;
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.356);
+    background: none;
+    border: none;
+    transition-duration: 0.2s;    
+}
+#mais button:hover{
+    cursor: pointer;
+}
+#menos button:hover{
+    cursor: pointer;
+}
+#mais button:active{
+    scale:1.2
+}
+#menos button:active{
+    scale:1.2    
+}
+
+#quantidade{
+    width: 65px;
+    font-size:25px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.541);   
+    background-color: #ffe9e9;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.281);
+    border: 0.5px solid white;
+    border-radius: 5px;
+}
+#area-produto-footer{
+    display: flex;    
+    margin-left: 40px;
+    margin-top: 10px; 
+}
+#adicionar-carrinho-btn{
+    margin-left: 100px;
+    font-family: 'Montserrat', sans-serif;
+    justify-items: center;
+    border-radius: 15px ;    
+}
+#adicionar-carrinho-btn:hover{
+    cursor: pointer;
+}
+#adicionar-carrinho-btn a{    
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+    
+}
+#sub-total{ 
+    font-weight: bold;
+    font-size: 28px;
+    margin-left:300px;    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.295);        
+}
+#valor{
+    font-weight: bold;
+    font-size: 28px;
+    margin-left:10px; 
+    text-decoration: underline;   
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.295);
+}
+#finalizar-compra-area{
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+}
+
+#finalizar-compra-area button{
+    height: 55px;
+    width: 250px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.445);
+    border-radius: 12px;
+    transition-duration: 0.2s;
+}
+#finalizar-compra-area button:active{
+    scale:1.2;
+}
+
+#total-area{
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 15px;
+    margin-left: 35%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.295);
+}
+#valor-total{
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.295);
+}
+
+#carrinho-vazio{
+    display: flex;
+    margin-left: 35%;
+    margin-top: 10%;
+    align-content: center;
+}
+
+#carrinho-vazio h1{
+    font-size: 50px;
+}
+
+#carrinho-vazio img{
+    margin-top: 40px;
+}
